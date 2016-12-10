@@ -8,8 +8,7 @@ const ActionsSdkAssistant = require('actions-on-google').ActionsSdkAssistant;
 const express = require('express');
 const app = express();
 
-const INTRO = '<speak>Hello, I\'m Aeden. Your Westworld host. Let\'s begin. ' +
-  'It\'s so nice to meet you. What questions can I answer about Westworld?</speak>';
+const INTRO = '<speak>Hello! It\'s so nice to meet you. What questions can I answer about Westworld?</speak>';
 
 const PROMPTS = [
   'Do you have any questions about Westworld?'
