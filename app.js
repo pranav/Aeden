@@ -69,8 +69,8 @@ app.post('/', (request, response) => {
           if (aeden.metadata.topic_name === '__welcome__') {
             return;
           }
-          let aedenResponse = JSON.parse(message).messages.map(item => item.text).join(".");
-          assistant.ask('<speak>' + aedenResponse + '</speak>');
+          let aedenMessages = aeden.messages.map(item => item.text).join(".");
+          assistant.ask('<speak>' + aedenMessages + '</speak>');
         });
       });
       // let ws = new WebSocket('wss://bot.discoverwestworld.com//a/ws/5233591336304640');
