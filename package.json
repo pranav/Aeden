@@ -1,0 +1,28 @@
+{
+  "name": "aeden",
+  "version": "1.0.0",
+  "description": "Westworld bot",
+  "main": "app.js",
+  "engines": {
+    "node": "7.0.0"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pranav/Aeden.git"
+  },
+  "author": "Pranav Gandhi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pranav/Aeden/issues"
+  },
+  "homepage": "https://github.com/pranav/Aeden#readme",
+  "dependencies": {
+    "actions-on-google": "^1.0.3",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  }
+}
