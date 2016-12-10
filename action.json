@@ -8,10 +8,7 @@
   "actions": [
     {
       "initialTrigger": {
-        "intent": "assistant.intent.action.MAIN",
-        "queryPatterns": [{
-          "queryPattern": "let's go to westworld."
-        }]
+        "intent": "assistant.intent.action.MAIN"
       },
       "httpExecution": {
         "url": "https://westworld-152103.appspot.com"

@@ -21,12 +21,12 @@ app.post('/', (request, response) => {
   console.log("Received POST!");
   const assistant = new ActionsSdkAssistant({request, response});
 
-  const entryPoint = (assistant) => {
+  let entryPoint = (assistant) => {
     console.log('Reached entryPoint!');
     assistant.ask(assistant.buildInputPrompt(true, INTRO, PROMPTS));
   };
 
-  const rawInput = (assistant) => {
+  let rawInput = (assistant) => {
     console.log('Reached rawInput!');
     if (assistant.getRawInput() === 'bye') {
       assistant.tell('bye.');
@@ -35,10 +35,10 @@ app.post('/', (request, response) => {
     }
   };
 
-  assistant.handleRequest({
-    [assistant.StandardIntents.MAIN]: entryPoint,
-    [assistant.StandardIntents.TEXT]: rawInput
-  });
+  let actionMap = new Map();
+  actionMap.set(assistant.StandardIntents.MAIN, entryPoint);
+  actionMap.set(assistant.StandardIntents.TEXT, rawInput);
+  assistant.handleRequest(actionMap);
 });
 
 
